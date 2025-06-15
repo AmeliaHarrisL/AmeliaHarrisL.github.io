@@ -1,0 +1,447 @@
+/* Custom Styles for Amelia Harris Solicitors - Revamped */
+
+/* Google Fonts */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean sans-serif for body */
+    line-height: 1.7;
+    color: #4F4F4F; /* Dark grey for body text */
+    font-weight: 400;
+    background-color: #FFFFFF; /* White background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif; /* Elegant serif for headings */
+    font-weight: 700;
+    color: #0A2B4C; /* Deep Navy Blue for primary headings */
+}
+
+/* --- Color Palette Variables --- */
+:root {
+    --primary-color: #0A2B4C;   /* Deep Navy Blue */
+    --secondary-color: #B08D57; /* Muted Gold/Bronze Accent */
+    --light-bg: #F8F9FA;        /* Light Grey Background (Bootstrap default) */
+    --custom-light-bg: #F4F7F9; /* Slightly different light grey */
+    --white-color: #FFFFFF;
+    --dark-text: #212529;       /* Bootstrap dark text */
+    --medium-grey-text: #4F4F4F;
+    --light-grey-text: #757575;
+    --border-color: #DEE2E6;    /* Bootstrap border color */
+    --primary-hover-color: #08223b; /* Darker navy for hover */
+    --secondary-hover-color: #a07e4e; /* Darker gold for hover */
+}
+
+/* --- Helper Classes --- */
+.text-primary-custom { color: var(--primary-color) !important; }
+.text-secondary-custom { color: var(--secondary-color) !important; }
+.bg-primary-custom { background-color: var(--primary-color) !important; }
+.bg-secondary-custom { background-color: var(--secondary-color) !important; }
+.bg-light-custom { background-color: var(--custom-light-bg); }
+.text-dark-custom { color: var(--dark-text); }
+.text-white-75 { color: rgba(255,255,255,0.75) !important; }
+.text-white-50 { color: rgba(255,255,255,0.50) !important; }
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.top-bar a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.top-bar a:hover {
+    color: var(--secondary-color) !important;
+}
+.top-bar.scrolled-top-bar {
+    /* Styles for when top-bar is scrolled (e.g., hide or change style) */
+    /* transform: translateY(-100%); */
+    /* opacity: 0; */
+}
+
+
+/* --- Navbar --- */
+.navbar {
+    transition: padding 0.3s ease-in-out;
+}
+.navbar-brand img { /* Style for logo image */
+    max-height: 40px; /* Adjust as needed */
+    width: auto;
+}
+/* If you use text logo instead of image: */
+/*
+.navbar-brand {
+    font-family: 'Lora', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--primary-color) !important;
+}
+.navbar-brand .brand-solicitors {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--medium-grey-text);
+}
+*/
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--medium-grey-text);
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(10, 43, 76, 0.05);
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+.navbar.scrolled {
+    /* box-shadow: 0 2px 15px rgba(0,0,0,0.1); */ /* Shadow already on header tag */
+}
+
+/* --- Buttons --- */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 0.65rem 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-primary-custom:hover, .btn-primary-custom:focus {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(10, 43, 76, 0.2);
+}
+.btn-secondary-custom {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white-color);
+}
+.btn-secondary-custom:hover, .btn-secondary-custom:focus {
+    background-color: var(--secondary-hover-color);
+    border-color: var(--secondary-hover-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(176, 141, 87, 0.2);
+}
+.btn-outline-primary-custom {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary-custom:hover, .btn-outline-primary-custom:focus {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transform: translateY(-2px);
+}
+
+
+/* --- Hero Section Revamped --- */
+.hero-section-revamped {
+    background-color: var(--white-color);
+    padding: 6rem 0;
+    overflow: hidden;
+}
+.min-vh-75 { min-height: 75vh; }
+.hero-section-revamped .hero-text-content h1 {
+    font-size: calc(2.2rem + 1.5vw);
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+.hero-section-revamped .hero-text-content .lead {
+    font-size: 1.15rem;
+    color: var(--medium-grey-text);
+    font-weight: 400;
+}
+.hero-section-revamped img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* --- Section Title Styles --- */
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.section-title-left {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+.section-title-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+.section-title-center {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+.section-title-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+.section-title-center-light { /* Pour fond sombre */
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--white-color);
+}
+.section-title-center-light::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+
+/* --- About Us Section --- */
+#about .lead-sm {
+    font-size: 1.1rem;
+    color: var(--medium-grey-text);
+}
+
+/* --- Expertise Section Revamped --- */
+.expertise-card-revamped .card-img-top { /* Style si vous ajoutez des images aux cartes d'expertise */
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: calc(0.375rem - 1px); /* Pour correspondre au border-radius de la carte */
+    border-top-right-radius: calc(0.375rem - 1px);
+}
+.expertise-card-revamped {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    padding: 1.5rem;
+}
+.expertise-card-revamped:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: var(--secondary-color);
+}
+.expertise-card-revamped .expertise-icon {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+.expertise-card-revamped .card-title {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+.expertise-card-revamped .card-text {
+    font-size: 0.9rem;
+    color: var(--light-grey-text);
+    line-height: 1.6;
+}
+.stretched-link-custom {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.stretched-link-custom:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+.stretched-link-custom .fa-arrow-right {
+    margin-left: 0.3rem;
+    transition: transform 0.2s ease;
+}
+.stretched-link-custom:hover .fa-arrow-right {
+    transform: translateX(3px);
+}
+
+
+/* --- Commitment Section (Texte noir sur fond clair) --- */
+#commitment {
+    /* background-color: var(--custom-light-bg); */ /* Optionnel: si vous voulez un fond gris clair pour la section */
+}
+.commitment-item-light {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--white-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem; /* Ajusté depuis le HTML pour être ici */
+}
+.commitment-item-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+/* Les couleurs des icônes (text-secondary-custom) et des textes (h4, p) sont gérées dans le HTML ou par défaut */
+.commitment-item-light h4 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+.commitment-item-light p {
+    color: var(--medium-grey-text);
+}
+
+/* --- Testimonials Section --- */
+.testimonial-card {
+    border: 1px solid var(--border-color);
+}
+.testimonial-card .rating-stars {
+    color: var(--secondary-color);
+}
+.testimonial-card .fa-star-half-alt {
+    color: var(--secondary-color);
+}
+
+/* --- Awards Section --- */
+#awards img {
+    max-height: 60px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+#awards img:hover {
+    opacity: 1;
+}
+
+/* --- Contact Section --- */
+.contact-details-box address span {
+    display: inline-block;
+}
+.contact-details-box a:hover {
+    color: var(--secondary-color) !important;
+}
+.form-label.small {
+    font-weight: 500;
+    color: var(--medium-grey-text);
+}
+#contact .form-control {
+    border-color: var(--border-color);
+    font-size: 0.95rem;
+}
+#contact .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.2rem rgba(176, 141, 87, 0.25);
+}
+
+/* --- Footer Revamped --- */
+.footer-revamped {
+    background-color: var(--primary-color);
+}
+.footer-revamped .footer-heading {
+    font-family: 'Lora', serif;
+    color: var(--white-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.footer-revamped p, .footer-revamped ul li a {
+    color: rgba(255,255,255,0.75);
+    transition: color 0.3s ease;
+}
+.footer-revamped ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.footer-revamped hr {
+    border-top-color: rgba(255,255,255,0.2);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+    .hero-section-revamped {
+        padding: 4rem 0;
+    }
+    .hero-section-revamped .hero-text-content h1 {
+        font-size: calc(1.8rem + 1.2vw);
+    }
+    .navbar-collapse {
+        background-color: var(--white-color);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 4px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        border: 1px solid var(--border-color);
+    }
+    .navbar-light .navbar-nav .nav-link {
+        padding: 0.6rem;
+    }
+    .section-title-left, .section-title-center, .section-title-center-light {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-bar {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    .top-bar .container > div:first-child {
+        margin-bottom: 0.25rem;
+    }
+     .top-bar .container {
+        flex-direction: column;
+    }
+    .hero-section-revamped .row {
+        flex-direction: column-reverse;
+    }
+    .hero-section-revamped img {
+        margin-bottom: 2rem;
+    }
+    .hero-section-revamped .hero-text-content {
+        text-align: center !important;
+    }
+    .section-title-left, #about .ps-lg-5 {
+        text-align: center;
+        padding-left: 0 !important;
+    }
+    .section-title-left::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-revamped .text-md-end {
+        text-align: center !important;
+    }
+     .footer-revamped .text-md-start {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+}
